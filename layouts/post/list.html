@@ -2,6 +2,33 @@
 {{/*
   This template is the same as the default and is here to demonstrate that if you have a content directory called "post" you can create a layouts directory, just for that section.
    */}}
+
+<!--   <ul>
+    {{ range .Site.Taxonomies.tags }}
+      <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> {{ .Count }}</li>
+    {{ end }}
+  </ul> -->
+
+  <ul class="pa0">
+    {{ rrange .Site.Taxonomies.tags }}
+     <li class="list di">
+       <a href="{{ .RelPermalink }}" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">
+         {{- .LinkTitle -}}
+       </a>
+     </li>
+    {{ end }}
+  </ul>
+
+  <ul class="pa0">
+    {{ rrange .Site.Taxonomies.categories }}
+     <li class="list di">
+       <a href="{{ .RelPermalink }}" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">
+         {{- .LinkTitle -}}
+       </a>
+     </li>
+    {{ end }}
+  </ul>
+
   <article class="pa3 pa4-ns nested-copy-line-height">
     <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy {{ $.Param "text_color" | default "mid-gray" }}">
       {{ .Content }}
