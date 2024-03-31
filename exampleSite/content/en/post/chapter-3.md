@@ -2,7 +2,8 @@
 date: 2017-04-11T11:13:32-04:00
 description: "Monsieur the Cardinal"
 featured_image: ""
-tags: []
+tags: ["Uppercased With Space/And a Slash", "lowercased"]
+categories: [ "Custom With Space"]
 title: "Chapter III: Monsieur the Cardinal"
 ---
 

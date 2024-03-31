@@ -1,7 +1,7 @@
 title = "Notre-Dame de Paris"
 baseURL = "https://gohugo-theme-ananke.pages.dev"
 languageCode = "en-us"
-theme = ["github.com/theNewDynamic/gohugo-theme-ananke"]
+theme = ["github.com/ltrubov/gohugo-theme-ananke-customizatiion"]
 resourceDir = "../resources"
 
 DefaultContentLanguage = "en"
@@ -25,6 +25,17 @@ enableRobotsTXT = true
   changefreq = "monthly"
   priority = 0.5
   filename = "sitemap.xml"
+  
+[menus]
+[[menus.main]]
+  name = 'Tags'
+  pageRef = '/tags'
+  weight = 10
+  
+[[menus.main]]
+  name = 'Categories'
+  pageRef = '/categories'
+  weight = 20
 
 [params]
   text_color = ""

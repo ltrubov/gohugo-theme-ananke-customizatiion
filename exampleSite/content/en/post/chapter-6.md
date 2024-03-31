@@ -2,7 +2,8 @@
 date: 2017-04-14T11:25:05-04:00
 description: "Esmeralda"
 featured_image: "/images/esmeralda.jpg"
-tags: []
+tags: ["Uppercased With Space/And a Slash"]
+categories: [ "Custom With Space"]
 title: "Chapter VI: Esmeralda"
 disable_share: false
 ---

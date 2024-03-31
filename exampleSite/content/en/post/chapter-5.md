@@ -2,7 +2,8 @@
 date: 2017-04-13T11:15:58-04:00
 description: "Quasimodo"
 featured_image: ""
-tags: []
+tags: ["nice tag", "Uppercased"]
+categories: [ "Uppercased"]
 title: "Chapter V: Quasimodo"
 ---
 
