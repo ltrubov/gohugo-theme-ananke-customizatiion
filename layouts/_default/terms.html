@@ -2,13 +2,16 @@
     {{ $data := .Data }}
   <article class="cf pa3 pa4-m pa4-l">
     {{ $taxonomyObject := cond (eq .Data.Plural "tags") .Site.Taxonomies.tags .Site.Taxonomies.categories }}
+    {{ $replaceFlag := getenv "HUGO_READER_REPLACE_FLAG"  }}
     <div class="measure-wide-l center f4 lh-copy nested-copy-line-height nested-links {{ $.Param "text_color" | default "mid-gray" }}">
       {{ .Content }}
       <ul class="pa0">
         {{ range .Data.Pages }}
          <li class="list di">
+           {{ $transformedTerm := replace (lower .Page.Title) " " "-" }}
+           {{ $normalizedTerm := cond (ne $replaceFlag "") $transformedTerm .Page.Title }}
            <a href="{{  .Page.RelPermalink }}" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">
-             {{- .Page.Title -}} <span class="f4"><strong> {{ $taxonomyObject.Count .Page.Title }}</strong></span>
+             {{- .Page.Title -}} <span class="f4"><strong> {{ $taxonomyObject.Count $normalizedTerm }}</strong></span>
            </a>
          </li>
         {{ end }}
@@ -30,3 +33,4 @@
     </section>
   </div>
 {{ end }}
+
