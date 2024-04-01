@@ -1,7 +1,7 @@
-module github.com/theNewDynamic/gohugo-theme-ananke/exampleSite
+module github.com/ltrubov/gohugo-theme-ananke-customizatiion/exampleSite
 
 go 1.14
 
-require github.com/theNewDynamic/gohugo-theme-ananke v0.0.0-20220421182344-c49009b823de // indirect
+replace github.com/ltrubov/gohugo-theme-ananke-customizatiion => ../
 
-replace github.com/theNewDynamic/gohugo-theme-ananke => ../
+require github.com/ltrubov/gohugo-theme-ananke-customizatiion v0.0.0-20240331055449-c2c7db794fcf // indirect
