@@ -2,7 +2,7 @@
     {{ $data := .Data }}
   <article class="cf pa3 pa4-m pa4-l">
     {{ $taxonomyObject := cond (eq .Data.Plural "tags") .Site.Taxonomies.tags .Site.Taxonomies.categories }}
-    {{ $replaceFlag := getenv "HUGO_READER_REPLACE_FLAG"  }}
+    {{ $replaceFlag := getenv "HUGO_TAXONOMY_REPLACE_FLAG"  }}
     <div class="measure-wide-l center f4 lh-copy nested-copy-line-height nested-links {{ $.Param "text_color" | default "mid-gray" }}">
       {{ .Content }}
       <ul class="pa0">
